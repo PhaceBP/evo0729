@@ -1,0 +1,5 @@
+Készíts olyan generikus perzisztencia (dao) réteget amely képes bármilyen entitás
+számára (amely egy adott ősosztályból származik) crud műveleteket biztosítani,
+hasonlóan mint, például a Spring Data.
+Az összes entitásnak legyen egy közös őse, és bármilyen újonnan elkészítetett entitás
+osztállyal legyen képes működni az API.
