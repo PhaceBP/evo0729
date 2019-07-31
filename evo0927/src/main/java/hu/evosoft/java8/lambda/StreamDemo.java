@@ -1,6 +1,8 @@
 package hu.evosoft.java8.lambda;
 
+import java.util.IntSummaryStatistics;
 import java.util.function.BinaryOperator;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamDemo {
@@ -20,6 +22,17 @@ public class StreamDemo {
 		Stream.Builder<String> builder = Stream.builder();
 
 		Stream<String> s5 = builder.add("alma").add("korte").build();
+		
+		IntStream stream1to10 = IntStream.rangeClosed(1, 10);
+		double avg = stream1to10.average().getAsDouble();				
+		System.out.println("Avg :"+ avg);
+		
+		IntStream stream1to9 = IntStream.range(1, 10);
+		IntSummaryStatistics statistics = stream1to9.summaryStatistics();
+		int min = statistics.getMin();
+		int max = statistics.getMax();
+		avg = statistics.getAverage();
+		System.out.println("Min:"+min + " max:"+max + " avg:"+avg);
 		
 		reduceExample();
 	}
