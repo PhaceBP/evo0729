@@ -25,8 +25,6 @@ public class Urls {
 
         long start = System.currentTimeMillis();
 
-        ForkJoinPool pool = new ForkJoinPool(4);
-
         List<String> words = 
         links.parallelStream()
                 .filter(s -> s.startsWith("https://dex.hu"))

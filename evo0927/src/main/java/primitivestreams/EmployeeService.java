@@ -7,38 +7,53 @@ import java.util.stream.IntStream;
 
 public class EmployeeService {
 
-    public List<Employee> generateEmployees(String prefix, int number) {
-        return IntStream
-                .range(0, number)
-                .mapToObj(i -> new Employee(prefix + " " + i, 0, null)) // IntFunction
-                .collect(Collectors.toList());
-    }
+	public static List<Employee> generateEmployees(String prefix, int number) {
+		return IntStream.range(0, number).mapToObj(i -> new Employee(prefix + " " + i, ((int)(Math.random()+1)*1000), null)) // IntFunction
+				.collect(Collectors.toList());
+	}
 
-    public long sumSalary(List<Employee> employees) {
-        return employees.stream().mapToInt(Employee::getSalary).sum(); // ToIntFunction
-    }
+	public static long sumSalary(List<Employee> employees) {
+		return employees.stream().mapToInt(Employee::getSalary).sum(); // ToIntFunction
+	}
 
-    public Boundaries salaryBoundaries(List<Employee> employees) {
-        IntSummaryStatistics stat = employees.stream().mapToInt(Employee::getSalary).summaryStatistics();
-        return new Boundaries(stat.getMin(), stat.getMax());
-    }
+	public static Boundaries salaryBoundaries(List<Employee> employees) {
+		IntSummaryStatistics stat = employees.stream().mapToInt(Employee::getSalary).summaryStatistics();
 
-    public static class Boundaries {
-        private int min;
+		return new Boundaries(stat.getMin(), stat.getMax());
+	}
 
-        private int max;
+	public static class Boundaries {
+		private int min;
 
-        public Boundaries(int min, int max) {
-            this.min = min;
-            this.max = max;
-        }
+		private int max;
 
-        public int getMin() {
-            return min;
-        }
+		public Boundaries(int min, int max) {
+			this.min = min;
+			this.max = max;
+		}
 
-        public int getMax() {
-            return max;
-        }
-    }
+		public int getMin() {
+			return min;
+		}
+
+		public int getMax() {
+			return max;
+		}
+
+		@Override
+		public String toString() {
+			return "Boundaries [min=" + min + ", max=" + max + "]";
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		List<Employee> emps = generateEmployees("emp", 10);
+
+		Boundaries b = salaryBoundaries(emps);
+		
+		System.out.println(b.toString());
+
+	}
 }
