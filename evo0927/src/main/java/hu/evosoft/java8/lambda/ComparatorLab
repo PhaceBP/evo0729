@@ -1,0 +1,13 @@
+Készíts egy Todo osztályt todoId, description, nameOfOWner és status (enum) attribútumokkal
+. Készíts egy TodoManager osztályt, amely konstruktorban egy Todo
+listát vár.
+A metódusok rendre új listát készítenek, rendezik a következõ szabályok
+alapján és adják vissza:
+
+- Rendezés TodoId alapján
+- Rendezés a description alapján. Amennyiben nincs kitöltve
+a description értéke (null) akkor elõl szerepeljen
+
+
+Check: Comparator.naturalOder(), Comparator.comparing(), Comparator.reserved()
+Comparator.nullFirst(), Comparator.thenComparing()
