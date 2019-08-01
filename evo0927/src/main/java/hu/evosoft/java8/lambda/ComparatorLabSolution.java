@@ -85,5 +85,33 @@ public class ComparatorLabSolution {
 				.sorted(Comparator.comparing(Todo::getDescription, Comparator.nullsFirst(Comparator.naturalOrder())))
 				.collect(Collectors.toList());
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

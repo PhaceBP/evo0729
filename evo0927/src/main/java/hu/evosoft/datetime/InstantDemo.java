@@ -1,16 +1,27 @@
 package hu.evosoft.datetime;
 
+import java.nio.channels.SeekableByteChannel;
 import java.time.Duration;
 import java.time.Instant;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.Set;
 
 public class InstantDemo {
 
 	public static void main(String[] args) {
 
+		
+		Set<String> zones = ZoneId.getAvailableZoneIds();
+		
+		zones.stream().sorted().forEach(System.out::println);
+		
 		// Get the current time
 		Instant instant = Instant.now();
+		ZonedDateTime zd = instant.atZone(ZoneId.of("US/Alaska"));
+		
 		// Output format is ISO-8601
-		System.out.println(instant);
+		System.out.println("DD: "+ zd);
 		
 
 		// Create from a String
