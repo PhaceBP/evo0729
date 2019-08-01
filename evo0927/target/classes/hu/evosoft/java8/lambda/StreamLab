@@ -1,0 +1,10 @@
+Hasznald fel a korabban letrohozott Employee osztalyt, majd
+keszits streamet amely legalabb 4 employee objektumot tartalmaz.
+
+1. Kerdezzuk le, hagy elem talalhato a streamben?
+2. Keressuk meg a legkisebb fizetessel rendelkezo employeet
+3. Keressuk meg azokat az employeekat akiknek a neve parameterkent adott Stringgel
+kezdodik, majd a megkapott eredmenyhalmazt rendezzuk be nev szerint
+4. Keressuk meg az elso olyan employeet akinek a fizetese magasabb mint 3000
+5. Dontsuk el, hogy az osszes employee neve legalabb 5 karakter hosszu a listaban
+6. Adjuk ossze az alkalmazottak neveinek hosszat!

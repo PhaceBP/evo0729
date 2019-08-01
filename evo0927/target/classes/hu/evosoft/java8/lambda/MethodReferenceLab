@@ -1,0 +1,4 @@
+A demókban található Employee osztályt felhasználva készits olyan
+függvényt, amely egy paraméterként kapott Employee tipusú listában
+található rekordok adott attribútumát listázza ki. Hogy melyik attribútum
+kerül kiirásra legyen paraméterezhetõ, használj method referenc-t.

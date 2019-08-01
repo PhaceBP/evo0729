@@ -56,5 +56,28 @@ public class DurationDemo {
 		Duration d5 = Duration.parse("PT250M");
 
 		System.out.println(d5);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 }
