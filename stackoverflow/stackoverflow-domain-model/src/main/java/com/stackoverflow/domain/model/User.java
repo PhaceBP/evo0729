@@ -22,6 +22,15 @@ public class User extends BusinessObject<Long> {
 
 	private Long numberOfBronzeBadges = Long.valueOf(0);
 
+	public User() {
+
+	}
+
+	public User(String userName, LocalDateTime creationTime) {
+		super(creationTime, true);
+		this.userName = userName;
+	}
+
 	public User(Long id, String userName, LocalDateTime creationTime) {
 		super(id, creationTime, true);
 		this.userName = userName;
@@ -57,6 +66,26 @@ public class User extends BusinessObject<Long> {
 
 	public void increaseBronzeBadges() {
 		this.numberOfBronzeBadges += 1;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public void setReputationScore(Long reputationScore) {
+		this.reputationScore = reputationScore;
+	}
+
+	public void setNumberOfGoldBadges(Long numberOfGoldBadges) {
+		this.numberOfGoldBadges = numberOfGoldBadges;
+	}
+
+	public void setNumberOfSilverBadges(Long numberOfSilverBadges) {
+		this.numberOfSilverBadges = numberOfSilverBadges;
+	}
+
+	public void setNumberOfBronzeBadges(Long numberOfBronzeBadges) {
+		this.numberOfBronzeBadges = numberOfBronzeBadges;
 	}
 
 	@Override

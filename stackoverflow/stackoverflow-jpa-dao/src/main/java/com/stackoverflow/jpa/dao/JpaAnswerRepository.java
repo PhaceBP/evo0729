@@ -1,12 +1,12 @@
 package com.stackoverflow.jpa.dao;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Component;
 
 import com.stackoverflow.domain.model.Answer;
-import com.stackoverflow.domain.model.Question;
-import com.stackoverflow.domain.model.User;
 
-@Repository
-public class JpaAnswerRepository extends JpaCrudRepository<Answer, Long> {
+@Component
+public interface JpaAnswerRepository extends JpaRepository<Answer, Long> {
+
 
 }

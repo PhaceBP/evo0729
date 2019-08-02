@@ -28,6 +28,16 @@ public class Question extends BusinessObject<Long> {
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Answer> answers = new ArrayList<>();
 
+	public Question() {
+
+	}
+
+	public Question(String title, LocalDateTime creationTime, User author) {
+		super(creationTime, true);
+		this.title = title;
+		this.author = author;
+	}
+
 	public Question(Long id, String title, LocalDateTime creationTime, User author) {
 		super(id, creationTime, true);
 		this.title = title;
@@ -44,6 +54,18 @@ public class Question extends BusinessObject<Long> {
 
 	public String getTitle() {
 		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public void setAuthor(User author) {
+		this.author = author;
+	}
+
+	public void setAnswers(List<Answer> answers) {
+		this.answers = answers;
 	}
 
 	public List<Answer> getAnswers() {

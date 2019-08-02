@@ -1,14 +1,13 @@
 package com.stackoverflow.jpa.dao;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
-@EnableAutoConfiguration
+@EnableJpaRepositories(basePackages = {"com.stackoverflow.jpa.dao"})
 @EntityScan(basePackages = {"com.stackoverflow.domain.model"})
-@ComponentScan(basePackages = "com.stackoverflow.jpa.dao")
 public class DaoConfig {
-
+	
+	
 }

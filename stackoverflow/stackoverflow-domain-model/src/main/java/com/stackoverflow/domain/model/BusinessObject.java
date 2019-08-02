@@ -30,7 +30,17 @@ public abstract class BusinessObject<ID> implements Serializable {
 
 	
 	private Boolean isActive;
+	
+	public BusinessObject() {
+		
+	}
 
+	public BusinessObject(LocalDateTime creationTime, Boolean isActive) {
+		super();
+		this.creationTime = creationTime;
+		this.isActive = isActive;
+	}
+	
 	public BusinessObject(ID id, LocalDateTime creationTime, Boolean isActive) {
 		super();
 		this.id = id;

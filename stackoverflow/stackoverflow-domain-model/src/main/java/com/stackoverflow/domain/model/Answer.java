@@ -31,6 +31,16 @@ public class Answer extends BusinessObject<Long> {
 	@OneToMany(mappedBy="parent")
 	private List<Answer> replies = new ArrayList<Answer>();
 
+	public Answer() {
+		
+	}
+	
+	public Answer(LocalDateTime creationTime, User author, String content) {
+		super(creationTime, true);
+		this.content = content;
+		this.author = author;
+	}
+	
 	public Answer(Long id, LocalDateTime creationTime, User author, String content) {
 		super(id, creationTime, true);
 		this.content = content;
